@@ -40,7 +40,7 @@ function renderCheckout(){
     });
 
     const delivery =
-    subtotal>=499 ? 0 : 40;
+    subtotal>=200 ? 0 : 10;
 
     const total =
     subtotal + delivery;
@@ -199,7 +199,7 @@ function placeOrder(){
     });
 
     const delivery =
-    subtotal>=399 ? 0 : 20;
+    subtotal>=200 ? 0 : 10;
 
     const total =
     subtotal + delivery;
