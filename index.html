@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+    <meta name="description"
+        content="Order delicious food from Mahalakshmi Hotels. Fast delivery, fresh food, Cash On Delivery.">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+     
+   
+    <!-- Navbar -->
+
+    <header class="header1">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                K
+
+            </div>
+
+            <div class="search-box">
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search your favourite food...">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
+
+            <div class="cart-btn" id="cartBtn">
+
+                
+
+        
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Business Status -->
+
+    <section id="businessStatus"></section>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+
+                Delicious Food
+
+                Delivered Fresh
+
+            </h1>
+
+            <p>
+
+                Freshly prepared every day.
+
+                Cash On Delivery Available.
+
+            </p>
+
+            <button id="orderNow">
+
+                Order Now
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Categories -->
+
+    <section class="categories">
+
+        <h2>Categories</h2>
+
+        <div class="category-container">
+
+            <button data-category="All">All</button>
+
+            <button data-category="Biryani">Biryani</button>
+
+            <button data-category="Curries">Curries</button>
+
+            <button data-category="Starters">Starters</button>
+
+            <button data-category="Rotis">Rotis</button>
+
+            <button data-category="Specials">Specials</button>
+
+        </div>
+
+    </section>
+
+    <!-- Menu -->
+
+    <section>
+
+        <h2 class="section-title">
+
+            Popular Dishes
+
+        </h2>
+
+        <div id="foodContainer" class="food-grid">
+
+        </div>
+
+    </section>
+
+    <!-- Floating Cart -->
+
+    <button id="floatingCart">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span id="floatingCount">
+
+            0
+
+        </span>
+
+    </button>
+
+    <!-- Food Details Modal -->
+
+    <div id="foodModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <span id="closeModal">&times;</span>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Cart Drawer -->
+
+    <div id="cartDrawer">
+
+    </div>
+
+    <!-- Checkout Drawer -->
+
+    <div id="checkoutDrawer">
+
+    </div>
+
+    <!-- Toast -->
+
+    <div id="toast"></div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>MAHA LAXMI RESTAURANT</h3>
+        <P>opt total fresh mart near sbi bank mandadam</P>
+
+
+        <p>
+
+            Fresh Food • Fast Delivery • Cash On Delivery
+
+        </p>
+        <p>Above 200 rupess free delivery</p>
+        <!-- ==========================================
+     FREE THUMS UP OFFER
+========================================== -->
+
+<section class="offer-banner">
+
+    <div class="offer-content">
+
+        <div class="offer-icon">
+            🥤
+        </div>
+
+        <div class="offer-text">
+
+            <h2>🎉 Special Free Drink Offer!</h2>
+
+            <p>
+                Order above <strong>₹200</strong>
+                and get a
+                <strong>FREE 200ml Thums Up</strong>
+            </p>
+
+            <p>
+                Order above <strong>₹500</strong>
+                and get a
+                <strong>FREE 500ml Thums Up</strong>
+            </p>
+             <p>
+                Order above <strong>₹1000</strong>
+                and get a
+                <strong>FREE 1 litre Thums Up</strong>
+            </p>
+             <p>
+                for a  <strong>DUM BIRYANI</strong>
+                 get a
+                <strong>FREE 200ml Thums Up</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Order Timing Notice -->
+
+<section class="order-notice">
+
+    <div class="order-notice-content">
+
+        <div class="order-notice-icon">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+        <div class="order-notice-text">
+
+            <h3>Order Timing Notice</h3>
+
+            <p>
+                Orders placed between
+                <strong>12:30 PM and 1:30 PM</strong>
+                may take a little longer to prepare.
+            </p>
+
+            <p>
+                <strong>Orders around 1:40:00 PM</strong>
+                delivery time.
+            </p>
+
+        </div>
+
+
+        <div class="order-notice-text">
+
+            <h3>Order Timing Notice</h3>
+
+            <p>
+                Orders placed between
+                <strong>5:30 PM and 9:00 PM</strong>
+                may take a little longer to prepare.
+            </p>
+
+            <p>
+                <strong>Orders around 8:00  PM and 9:15 pm </strong>
+                delivery time.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <p>
+
+            © 2026 All Rights Reserved
+
+        </p>
+
+    </footer>
+   <script src="food.js"></script>
+    <script src="storage.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+    <script src="whatsapp.js"></script>
+    <script src="admin.js"></script>
+     <script src="app.js"></script>
+
+    <!-- ================================
+     ADMIN ACCESS
+================================= -->
+
+<!-- =====================================================
+     ADMIN ACCESS BUTTON
+===================================================== -->
+
+
+
+<!-- =====================================================
+     ADMIN LOGIN MODAL
+===================================================== -->
+
+<div id="adminLoginModal" class="admin-modal hidden">
+
+    <div class="admin-login-box">
+
+        <button
+            id="closeAdminLogin"
+            class="admin-close"
+            type="button">
+
+            &times;
+
+        </button>
+
+
+        <div class="admin-login-icon">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+
+        <h2>Admin Access</h2>
+
+        <p>
+            Enter the admin password
+        </p>
+
+
+        <div class="admin-password-box">
+
+            <input
+                type="password"
+                id="adminPassword"
+                placeholder="Enter password"
+                autocomplete="off">
+
+            <button
+                id="toggleAdminPassword"
+                type="button">
+
+                <i class="fa-solid fa-eye"></i>
+
+            </button>
+
+        </div>
+
+
+        <button
+            id="adminLoginBtn"
+            class="admin-login-btn"
+            type="button">
+
+            Login
+
+        </button>
+
+
+        <p
+            id="adminLoginError"
+            class="admin-login-error">
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     ADMIN DASHBOARD
+===================================================== -->
+
+<section
+    id="adminDashboard"
+    class="admin-dashboard hidden">
+
+
+    <!-- ADMIN HEADER -->
+
+    <div class="admin-dashboard-header">
+
+        <div>
+
+            <span>FOOD GURU ADMIN</span>
+
+            <h2>
+                Restaurant Management
+            </h2>
+
+        </div>
+
+
+        <button
+            id="adminLogoutBtn"
+            class="admin-logout-btn"
+            type="button">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         DASHBOARD STATISTICS
+    ================================================= -->
+
+    <div class="admin-stats">
+
+
+        <div class="admin-stat-card">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <div>
+
+                <span>Total Items</span>
+
+                <strong id="adminTotalItems">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-stat-card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <span>Available</span>
+
+                <strong id="adminAvailableItems">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-stat-card">
+
+            <i class="fa-solid fa-circle-xmark"></i>
+
+            <div>
+
+                <span>Unavailable</span>
+
+                <strong id="adminUnavailableItems">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         RESTAURANT CONTROL
+    ================================================= -->
+
+    <div class="admin-card">
+
+        <div class="admin-card-heading">
+
+            <div>
+
+                <span class="admin-label">
+                    RESTAURANT
+                </span>
+
+                <h3>
+                    Restaurant Status
+                </h3>
+
+            </div>
+
+            <div
+                id="adminRestaurantBadge"
+                class="restaurant-badge">
+
+                OPEN
+
+            </div>
+
+        </div>
+
+
+        <p class="admin-description">
+
+            When the restaurant is closed, customers
+            cannot place new orders.
+
+        </p>
+
+
+        <button
+            id="restaurantToggleBtn"
+            class="restaurant-toggle-btn"
+            type="button">
+
+            Close Restaurant
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         BUSINESS HOURS
+    ================================================= -->
+
+    <div class="admin-card">
+
+        <div class="admin-card-heading">
+
+            <div>
+
+                <span class="admin-label">
+                    SETTINGS
+                </span>
+
+                <h3>
+                    Business Hours
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-hours-grid">
+
+
+            <div class="admin-field">
+
+                <label>
+                    Opening Time
+                </label>
+
+                <input
+                    type="time"
+                    id="openingTime">
+
+            </div>
+
+
+            <div class="admin-field">
+
+                <label>
+                    Closing Time
+                </label>
+
+                <input
+                    type="time"
+                    id="closingTime">
+
+            </div>
+
+
+            <button
+                id="saveHoursBtn"
+                class="admin-save-btn"
+                type="button">
+
+                Save Hours
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         ADD FOOD
+    ================================================= -->
+
+    <div class="admin-card">
+
+        <div class="admin-card-heading">
+
+            <div>
+
+                <span class="admin-label">
+                    MENU
+                </span>
+
+                <h3>
+                    Food Management
+                </h3>
+
+            </div>
+
+
+            <button
+                id="addFoodBtn"
+                class="admin-add-btn"
+                type="button">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Food
+
+            </button>
+
+        </div>
+
+
+        <!-- ADD / EDIT FORM -->
+
+        <div
+            id="adminFoodForm"
+            class="admin-food-form hidden">
+
+
+            <h3 id="adminFormTitle">
+                Add New Food
+            </h3>
+
+
+            <input
+                type="hidden"
+                id="adminEditFoodId">
+
+
+            <div class="admin-form-grid">
+
+
+                <div class="admin-field">
+
+                    <label>
+                        Food Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="adminFoodName"
+                        placeholder="Example: Chicken Biryani">
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select id="adminFoodCategory">
+
+                        <option value="Biryani">
+                            Biryani
+                        </option>
+
+                        <option value="Curries">
+                            Curries
+                        </option>
+
+                        <option value="Starters">
+                            Starters
+                        </option>
+
+                        <option value="Rotis">
+                            Rotis
+                        </option>
+
+                        <option value="Specials">
+                            Specials
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label>
+                        Price ₹
+                    </label>
+
+                    <input
+                        type="number"
+                        id="adminFoodPrice"
+                        min="0"
+                        placeholder="180">
+
+                </div>
+
+
+                <div class="admin-field">
+
+                    <label>
+                        Rating
+                    </label>
+
+                    <input
+                        type="number"
+                        id="adminFoodRating"
+                        min="0"
+                        max="5"
+                        step="0.1"
+                        value="4.5">
+
+                </div>
+
+
+                <div class="admin-field admin-full">
+
+                    <label>
+                        Image URL / Image Path
+                    </label>
+
+                    <input
+                        type="text"
+                        id="adminFoodImage"
+                        placeholder="assets/images/chicken-biryani.jpg">
+
+                </div>
+
+
+                <div class="admin-field admin-full">
+
+                    <label>
+                        Description
+                    </label>
+
+                    <textarea
+                        id="adminFoodDescription"
+                        rows="4"
+                        placeholder="Describe the food..."></textarea>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="admin-form-buttons">
+
+                <button
+                    id="saveFoodBtn"
+                    class="admin-save-btn"
+                    type="button">
+
+                    Save Food
+
+                </button>
+
+
+                <button
+                    id="cancelFoodBtn"
+                    class="admin-cancel-btn"
+                    type="button">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOD LIST -->
+
+        <div id="adminFoodList">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     ADMIN PASSWORD MODAL
+================================= -->
+
+
+
+
+<!-- ================================
+     ADMIN DASHBOARD
+================================= -->
+
+
+
+</body>
+
+</html>
